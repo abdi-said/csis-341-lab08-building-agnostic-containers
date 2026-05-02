@@ -3,8 +3,11 @@ services:
   frontend:
     image: nginx:alpine
     ports: ["8080:80"]
+    # Ensure local changes to index.html can be tested
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
   backend:
-    image: mendhak/httpbin:latest
+    image: kong/httpbin
     ports: ["8081:80"]
   db:
     image: postgres:16
