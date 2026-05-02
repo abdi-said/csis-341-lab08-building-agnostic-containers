@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: mendhak/httpbin:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: temp-cache
+          mountPath: /tmp/cache
+      volumes:
+      - name: temp-cache
+        emptyDir: {}
