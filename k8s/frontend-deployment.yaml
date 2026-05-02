@@ -4,10 +4,27 @@ metadata:
   name: frontend-html
 data:
   index.html: |
-    <html><body><h1>Student Records System</h1>
-    <p>Frontend running on GKE • Backend connected • DB healthy</p>
-    <a href="/status">Check Backend API</a></body></html>
-
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>System Status | Student Records</title>
+        <style>
+            body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 20px; background-color: #f4f7f6; }
+            .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 5px solid #2ecc71; }
+            .status-badge { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 4px 12px; border-radius: 16px; font-size: 0.85rem; font-weight: bold; margin-bottom: 1rem; }
+            .btn { display: inline-block; background: #3498db; color: white; text-decoration: none; padding: 10px 20px; border-radius: 4px; }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="status-badge">● SYSTEM OPERATIONAL</div>
+            <h1>Student Records System <small style="color: #7f8c8d; font-weight: normal;">| GKE LIVE</small></h1>
+            <p>✔ Frontend (Nginx) • ✔ Backend connected • ✔ Database healthy</p>
+            <a href="/status" class="btn">Verify Backend API Service</a>
+        </div>
+    </body>
+    </html>
 ---
 apiVersion: apps/v1
 kind: Deployment
