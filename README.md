@@ -1,1 +1,3 @@
-# csis-341-lab08-building-agnostic-containers-
+# CSIS 341
+## Lab 08: Building Agnostic with Containers
+
