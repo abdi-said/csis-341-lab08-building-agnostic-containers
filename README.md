@@ -9,3 +9,4 @@ As Lead Systems Architect, I designed and implemented a complete migration of a 
 The solution is fully **cloud-agnostic** — it runs locally with Docker Compose and deploys identically on GKE.
 
 ### Architecture
+![SRS Design](https://github.com/abdi-said/csis-341-lab08-building-agnostic-containers/blob/main/srs-design.png)
