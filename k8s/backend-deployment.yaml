@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: mendhak/httpbin:latest
+        image: kong/httpbin
         ports:
         - containerPort: 80
         volumeMounts:
